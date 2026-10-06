@@ -1,0 +1,68 @@
+Table Kasir {
+  id_kasir int [pk, increment]
+  nama varchar(100)
+  username varchar(50)
+  password varchar(255)
+  no_telp varchar(15)
+}
+
+Table Owner {
+  id_owner int [pk, increment]
+  nama varchar(100)
+  username varchar(50)
+  password varchar(255)
+  no_telp varchar(15)
+}
+
+Table Pelanggan {
+  id_pelanggan int [pk, increment]
+  nama varchar(100)
+  no_telp varchar(15)
+}
+
+Table Transaksi {
+  id_transaksi int [pk, increment]
+  tanggal_transaksi datetime
+  id_kasir int
+  id_pelanggan int
+  total_harga decimal(12,2)
+  uang_bayar decimal(12,2)
+  kembalian decimal(12,2)
+}
+
+Table Detail_Transaksi {
+  id_detail int [pk, increment]
+  id_transaksi int
+  id_barang int
+  jumlah int
+  harga_satuan decimal(12,2)
+  subtotal decimal(12,2)
+}
+
+Table Admin {
+  id_admin int [pk, increment]
+  nama varchar(100)
+  username varchar(50)
+  password varchar(255)
+  no_telp varchar(15)
+}
+
+Table Barang {
+  id_barang int [pk, increment]
+  id_admin int
+  kode_barang varchar(20) [unique]
+  nama_barang varchar(100)
+  harga_beli decimal(12,2)
+  harga_jual decimal(12,2)
+  stok int
+}
+
+Ref: Admin.id_admin < Barang.id_admin
+
+Ref: Kasir.id_kasir < Transaksi.id_kasir
+
+Ref: Pelanggan.id_pelanggan < Transaksi.id_pelanggan
+
+Ref: Transaksi.id_transaksi < Detail_Transaksi.id_transaksi
+
+Ref: Barang.id_barang < Detail_Transaksi.id_barang
