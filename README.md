@@ -1,66 +1,86 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Point of Sale (POS) System 🛒
+# Keluarga-Tanpa-KK
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> **Status:** 🚧 Work in Progress (Sedang dalam masa pengembangan)
 
-## About Laravel
+Sebuah platform sistem Point Of Sale (POS) yang dirancang khusus untuk mempermudah pencatatan transaksi penjualan, pengelolaan stok barang, serta pemantauan laporan penjualan dan kondisi keuangan sebuah toko.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Proyek ini dikembangkan oleh **Kelompok KTKK**.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 👥 Pemangku Kepentingan (Stakeholders)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Sistem ini dirancang untuk mengakomodasi beberapa peran pengguna:
 
-## Learning Laravel
+* **Pemilik Usaha (Owner):** Memantau penjualan, stok barang, melihat barang paling laris/jarang terjual, serta memantau laba rugi.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* **Kasir / Operator:** Melakukan pencatatan transaksi secara cepat, akurat, dan otomatis menghitung total bayar serta kembalian.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+* **Admin:** Mengelola data *master* (data barang, harga, dan stok) agar selalu valid dan mutakhir.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* **Pelanggan:** Mendapatkan pelayanan transaksi yang cepat dengan perhitungan dan informasi harga yang sesuai.
 
-## Laravel Sponsors
+## ✨ Fitur Utama
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Berdasarkan *Business Requirement Document* (BRD), sistem ini akan memiliki fungsionalitas berikut:
 
-### Premium Partners
+### 🛍️ Modul Transaksi & Kasir
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+* Pencatatan transaksi penjualan secara *real-time*.
 
-## Contributing
+* Pencarian dan pemilihan barang menggunakan kode barang unik.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* Perhitungan total harga otomatis.
 
-## Code of Conduct
+* Perhitungan uang kembalian pelanggan.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 📦 Modul Manajemen Barang & Stok
 
-## Security Vulnerabilities
+* Penambahan, pembaruan, dan pengelolaan data barang (Kode, Nama, Harga Beli, Harga Jual).
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+* Pembaruan stok barang secara otomatis setiap ada transaksi berhasil.
 
-## License
+* Menampilkan informasi jumlah ketersediaan stok barang.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 📊 Modul Laporan & Analitik
+
+* Menampilkan riwayat dan ringkasan transaksi penjualan.
+
+* Mengidentifikasi barang paling laris dan barang jarang dibeli.
+
+* Laporan laba/rugi berdasarkan data penjualan dibandingkan dengan modal (harga beli).
+
+## 🗄️ Skema Database
+
+Sistem ini menggunakan Relational Database dengan entitas utama sebagai berikut:
+
+1. **Admin** (`id_admin`, `nama`, `username`, `password`, `no_telp`)
+
+2. **Owner** (`id_owner`, `nama`, `username`, `password`, `no_telp`)
+
+3. **Kasir** (`id_kasir`, `nama`, `username`, `password`, `no_telp`)
+
+4. **Pelanggan** (`id_pelanggan`, `nama`, `no_telp`)
+
+5. **Barang** (`id_barang`, `kode_barang`, `nama_barang`, `harga_beli`, `harga_jual`, `stok`)
+
+6. **Transaksi** (`id_transaksi`, `tanggal_transaksi`, `total_harga`, `uang_bayar`, `kembalian`)
+
+7. **Detail Transaksi** (`id_detail`, `jumlah`, `harga_satuan`, `subtotal`)
+
+*(Catatan: Diagram Entity-Relationship dan relasi antar tabel telah didokumentasikan di dalam BRD).*
+
+## 🚀 Cara Menjalankan (Getting Started)
+
+*(Bagian ini akan diperbarui setelah tahap penulisan kode dimulai)*
+
+* Persyaratan Sistem: \[e.g., PHP 8, MySQL, Node.js\]
+
+* Cara Install:
+
+  1. Clone repository ini.
+
+  2. ...
+
+  3. ...
+
+*Dibuat untuk keperluan tugas / proyek pengembangan sistem E-commerce POS UAD.*
