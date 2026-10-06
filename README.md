@@ -73,7 +73,7 @@ Sistem ini menggunakan Relational Database dengan entitas utama sebagai berikut:
 
 *(Bagian ini akan diperbarui setelah tahap penulisan kode dimulai)*
 
-* Persyaratan Sistem: \[e.g., PHP 8, MySQL, Node.js\]
+* Persyaratan Sistem: \[PHP 8, MySQL, Node.js\]
 
 * Cara Install:
 
