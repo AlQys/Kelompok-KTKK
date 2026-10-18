@@ -11,22 +11,20 @@ class Admin extends Model
 
     // @dbml-sync:table-property
     protected $table = 'Admin';
-    protected $primaryKey = 'id_admin';
-    public $timestamps = false;
     // @enddbml-sync:table-property
+
+    protected $primaryKey = 'id_admin';
+
+    public $timestamps = false;
 
     // @dbml-sync:fillable
     protected $fillable = [
         'nama',
-		'username',
-		'password',
-		'no_telp'
+        'username',
+        'password',
+        'no_telp',
     ];
     // @enddbml-sync:fillable
-
-    protected $hidden = [
-        'password',
-    ];
 
     // @dbml-sync:casts
     protected $casts = [

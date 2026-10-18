@@ -15,7 +15,7 @@
                     },
                     "primaryKey": true,
                     "unique": false,
-                    "notNull": false,
+                    "notNull": true,
                     "autoIncrement": true,
                     "note": null,
                     "defaultValue": null
@@ -98,7 +98,7 @@
                     },
                     "primaryKey": true,
                     "unique": false,
-                    "notNull": false,
+                    "notNull": true,
                     "autoIncrement": true,
                     "note": null,
                     "defaultValue": null
@@ -181,7 +181,7 @@
                     },
                     "primaryKey": true,
                     "unique": false,
-                    "notNull": false,
+                    "notNull": true,
                     "autoIncrement": true,
                     "note": null,
                     "defaultValue": null
@@ -234,7 +234,7 @@
                     },
                     "primaryKey": true,
                     "unique": false,
-                    "notNull": false,
+                    "notNull": true,
                     "autoIncrement": true,
                     "note": null,
                     "defaultValue": null
@@ -347,7 +347,7 @@
                     },
                     "primaryKey": true,
                     "unique": false,
-                    "notNull": false,
+                    "notNull": true,
                     "autoIncrement": true,
                     "note": null,
                     "defaultValue": null
@@ -445,7 +445,7 @@
                     },
                     "primaryKey": true,
                     "unique": false,
-                    "notNull": false,
+                    "notNull": true,
                     "autoIncrement": true,
                     "note": null,
                     "defaultValue": null
@@ -528,7 +528,7 @@
                     },
                     "primaryKey": true,
                     "unique": false,
-                    "notNull": false,
+                    "notNull": true,
                     "autoIncrement": true,
                     "note": null,
                     "defaultValue": null
@@ -756,5 +756,5 @@
         }
     ],
     "version": 1,
-    "generated_at": "2026-10-13T01:25:45+00:00"
+    "generated_at": "2026-10-13T06:42:25+00:00"
 }

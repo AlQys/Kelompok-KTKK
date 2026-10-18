@@ -13,20 +13,26 @@ class Barang extends Model
     protected $table = 'Barang';
     // @enddbml-sync:table-property
 
+    protected $primaryKey = 'id_barang';
+
+    public $timestamps = false;
+
     // @dbml-sync:fillable
     protected $fillable = [
         'id_admin',
-		'kode_barang',
-		'nama_barang',
-		'harga_beli',
-		'harga_jual',
-		'stok'
+        'kode_barang',
+        'nama_barang',
+        'harga_beli',
+        'harga_jual',
+        'stok',
     ];
     // @enddbml-sync:fillable
 
     // @dbml-sync:casts
     protected $casts = [
-        
+        'harga_beli' => 'decimal:2',
+        'harga_jual' => 'decimal:2',
+        'stok' => 'integer',
     ];
     // @enddbml-sync:casts
 

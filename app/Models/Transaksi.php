@@ -13,20 +13,28 @@ class Transaksi extends Model
     protected $table = 'Transaksi';
     // @enddbml-sync:table-property
 
+    protected $primaryKey = 'id_transaksi';
+
+    public $timestamps = false;
+
     // @dbml-sync:fillable
     protected $fillable = [
+        'kode_transaksi',
         'tanggal_transaksi',
-		'id_kasir',
-		'id_pelanggan',
-		'total_harga',
-		'uang_bayar',
-		'kembalian'
+        'id_kasir',
+        'id_pelanggan',
+        'total_harga',
+        'uang_bayar',
+        'kembalian',
     ];
     // @enddbml-sync:fillable
 
     // @dbml-sync:casts
     protected $casts = [
-        'tanggal_transaksi' => 'datetime'
+        'tanggal_transaksi' => 'datetime',
+        'total_harga' => 'decimal:2',
+        'uang_bayar' => 'decimal:2',
+        'kembalian' => 'decimal:2',
     ];
     // @enddbml-sync:casts
 

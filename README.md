@@ -61,26 +61,40 @@ Sistem ini menggunakan Relational Database dengan entitas utama sebagai berikut:
 
 4. **Pelanggan** (`id_pelanggan`, `nama`, `no_telp`)
 
-5. **Barang** (`id_barang`, `kode_barang`, `nama_barang`, `harga_beli`, `harga_jual`, `stok`)
+5. **Barang** (`id_barang`, `id_admin`, `kode_barang`, `nama_barang`, `harga_beli`, `harga_jual`, `stok`)
 
-6. **Transaksi** (`id_transaksi`, `tanggal_transaksi`, `total_harga`, `uang_bayar`, `kembalian`)
+6. **Transaksi** (`id_transaksi`, `kode_transaksi`, `tanggal_transaksi`, `id_kasir`, `id_pelanggan`, `total_harga`, `uang_bayar`, `kembalian`)
 
-7. **Detail Transaksi** (`id_detail`, `jumlah`, `harga_satuan`, `subtotal`)
+7. **Detail Transaksi** (`id_detail`, `jumlah`, `harga_satuan`, `harga_beli_satuan`, `subtotal`)
 
 *(Catatan: Diagram Entity-Relationship dan relasi antar tabel telah didokumentasikan di dalam BRD).*
 
 ## 🚀 Cara Menjalankan (Getting Started)
 
-*(Bagian ini akan diperbarui setelah tahap penulisan kode dimulai)*
+Persyaratan: PHP 8.2+, Composer, dan SQLite atau MySQL.
 
-* Persyaratan Sistem: \[PHP 8, MySQL, Node.js\]
+1. Pasang dependency dengan `composer install`.
+2. Salin `.env.example` menjadi `.env`, atur koneksi database, lalu jalankan `php artisan key:generate`.
+3. Jalankan migrasi dan data awal dengan `php artisan migrate --seed`.
+4. Jalankan aplikasi dengan `php artisan serve`, lalu buka alamat lokal yang ditampilkan.
 
-* Cara Install:
+Seeder menyiapkan 1 admin, 1 owner, 3 kasir, 20 barang, sedikitnya 100.000 pelanggan, dan 100.000 transaksi demo beserta detailnya. Setiap transaksi demo terhubung ke pelanggan, kasir, serta satu atau lebih barang; nilai total, pembayaran, kembalian, dan snapshot harga modal detail dihitung konsisten. Nomor transaksi menggunakan rentang `DEMO-*`. Seeder dapat dijalankan ulang tanpa menggandakan data demo atau mereset stok yang sudah berubah.
 
-  1. Clone repository ini.
+| Peran | Username | Password awal |
+|---|---|---|
+| Admin | `admin` | `password` |
+| Kasir | `kasir` | `password` |
+| Kasir | `kasir2` | `password` |
+| Kasir | `kasir3` | `password` |
+| Owner | `owner` | `password` |
 
-  2. ...
+Ganti nilai password default pada seeder sebelum aplikasi digunakan dengan data nyata, lalu jalankan ulang seeder untuk menerapkannya.
 
-  3. ...
+### Alur POS
 
-*Dibuat untuk keperluan tugas / proyek pengembangan sistem E-commerce POS UAD.*
+- Admin dapat mencari, menambah, mengubah, serta menghapus barang dan pelanggan (data yang sudah terhubung ke transaksi tidak dapat dihapus). Kasir dapat mencari pelanggan saat transaksi.
+- Admin dan kasir dapat membuat transaksi. Server memvalidasi pembayaran dan stok, menyimpan detail serta harga modal saat transaksi, lalu mengurangi stok dalam satu transaksi database.
+- Semua peran dapat melihat daftar dan detail transaksi. Dashboard menampilkan ringkasan penjualan, estimasi laba kotor, barang terlaris, dan transaksi terbaru.
+- Jalankan test terarah dengan `php artisan test`.
+
+*Dibuat untuk keperluan tugas / proyek pengembangan sistem POS UAD.*

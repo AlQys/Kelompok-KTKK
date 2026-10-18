@@ -13,19 +13,27 @@ class DetailTransaksi extends Model
     protected $table = 'Detail_Transaksi';
     // @enddbml-sync:table-property
 
+    protected $primaryKey = 'id_detail';
+
+    public $timestamps = false;
+
     // @dbml-sync:fillable
     protected $fillable = [
         'id_transaksi',
-		'id_barang',
-		'jumlah',
-		'harga_satuan',
-		'subtotal'
+        'id_barang',
+        'jumlah',
+        'harga_satuan',
+        'harga_beli_satuan',
+        'subtotal',
     ];
     // @enddbml-sync:fillable
 
     // @dbml-sync:casts
     protected $casts = [
-        
+        'jumlah' => 'integer',
+        'harga_satuan' => 'decimal:2',
+        'harga_beli_satuan' => 'decimal:2',
+        'subtotal' => 'decimal:2',
     ];
     // @enddbml-sync:casts
 
