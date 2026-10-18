@@ -1,0 +1,760 @@
+{
+    "tables": [
+        {
+            "name": "Kasir",
+            "schema": "public",
+            "note": null,
+            "columns": [
+                {
+                    "name": "id_kasir",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": true,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": true,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "nama",
+                    "type": {
+                        "name": "varchar(100)",
+                        "schemaName": null,
+                        "args": "100",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "username",
+                    "type": {
+                        "name": "varchar(50)",
+                        "schemaName": null,
+                        "args": "50",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "password",
+                    "type": {
+                        "name": "varchar(255)",
+                        "schemaName": null,
+                        "args": "255",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "no_telp",
+                    "type": {
+                        "name": "varchar(15)",
+                        "schemaName": null,
+                        "args": "15",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                }
+            ],
+            "indexes": []
+        },
+        {
+            "name": "Owner",
+            "schema": "public",
+            "note": null,
+            "columns": [
+                {
+                    "name": "id_owner",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": true,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": true,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "nama",
+                    "type": {
+                        "name": "varchar(100)",
+                        "schemaName": null,
+                        "args": "100",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "username",
+                    "type": {
+                        "name": "varchar(50)",
+                        "schemaName": null,
+                        "args": "50",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "password",
+                    "type": {
+                        "name": "varchar(255)",
+                        "schemaName": null,
+                        "args": "255",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "no_telp",
+                    "type": {
+                        "name": "varchar(15)",
+                        "schemaName": null,
+                        "args": "15",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                }
+            ],
+            "indexes": []
+        },
+        {
+            "name": "Pelanggan",
+            "schema": "public",
+            "note": null,
+            "columns": [
+                {
+                    "name": "id_pelanggan",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": true,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": true,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "nama",
+                    "type": {
+                        "name": "varchar(100)",
+                        "schemaName": null,
+                        "args": "100",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "no_telp",
+                    "type": {
+                        "name": "varchar(15)",
+                        "schemaName": null,
+                        "args": "15",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                }
+            ],
+            "indexes": []
+        },
+        {
+            "name": "Transaksi",
+            "schema": "public",
+            "note": null,
+            "columns": [
+                {
+                    "name": "id_transaksi",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": true,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": true,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "tanggal_transaksi",
+                    "type": {
+                        "name": "datetime",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_kasir",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_pelanggan",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "total_harga",
+                    "type": {
+                        "name": "decimal(12,2)",
+                        "schemaName": null,
+                        "args": "12,2",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "uang_bayar",
+                    "type": {
+                        "name": "decimal(12,2)",
+                        "schemaName": null,
+                        "args": "12,2",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "kembalian",
+                    "type": {
+                        "name": "decimal(12,2)",
+                        "schemaName": null,
+                        "args": "12,2",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                }
+            ],
+            "indexes": []
+        },
+        {
+            "name": "Detail_Transaksi",
+            "schema": "public",
+            "note": null,
+            "columns": [
+                {
+                    "name": "id_detail",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": true,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": true,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_transaksi",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_barang",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "jumlah",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "harga_satuan",
+                    "type": {
+                        "name": "decimal(12,2)",
+                        "schemaName": null,
+                        "args": "12,2",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "subtotal",
+                    "type": {
+                        "name": "decimal(12,2)",
+                        "schemaName": null,
+                        "args": "12,2",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                }
+            ],
+            "indexes": []
+        },
+        {
+            "name": "Admin",
+            "schema": "public",
+            "note": null,
+            "columns": [
+                {
+                    "name": "id_admin",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": true,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": true,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "nama",
+                    "type": {
+                        "name": "varchar(100)",
+                        "schemaName": null,
+                        "args": "100",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "username",
+                    "type": {
+                        "name": "varchar(50)",
+                        "schemaName": null,
+                        "args": "50",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "password",
+                    "type": {
+                        "name": "varchar(255)",
+                        "schemaName": null,
+                        "args": "255",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "no_telp",
+                    "type": {
+                        "name": "varchar(15)",
+                        "schemaName": null,
+                        "args": "15",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                }
+            ],
+            "indexes": []
+        },
+        {
+            "name": "Barang",
+            "schema": "public",
+            "note": null,
+            "columns": [
+                {
+                    "name": "id_barang",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": true,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": true,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "id_admin",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "kode_barang",
+                    "type": {
+                        "name": "varchar(20)",
+                        "schemaName": null,
+                        "args": "20",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": true,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "nama_barang",
+                    "type": {
+                        "name": "varchar(100)",
+                        "schemaName": null,
+                        "args": "100",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "harga_beli",
+                    "type": {
+                        "name": "decimal(12,2)",
+                        "schemaName": null,
+                        "args": "12,2",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "harga_jual",
+                    "type": {
+                        "name": "decimal(12,2)",
+                        "schemaName": null,
+                        "args": "12,2",
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                },
+                {
+                    "name": "stok",
+                    "type": {
+                        "name": "int",
+                        "schemaName": null,
+                        "args": [],
+                        "original": null
+                    },
+                    "primaryKey": false,
+                    "unique": false,
+                    "notNull": false,
+                    "autoIncrement": false,
+                    "note": null,
+                    "defaultValue": null
+                }
+            ],
+            "indexes": []
+        }
+    ],
+    "enums": [],
+    "refs": [
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "Admin",
+                    "columns": [
+                        "id_admin"
+                    ],
+                    "relation": "1"
+                },
+                {
+                    "schema": "public",
+                    "table": "Barang",
+                    "columns": [
+                        "id_admin"
+                    ],
+                    "relation": "*"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "Kasir",
+                    "columns": [
+                        "id_kasir"
+                    ],
+                    "relation": "1"
+                },
+                {
+                    "schema": "public",
+                    "table": "Transaksi",
+                    "columns": [
+                        "id_kasir"
+                    ],
+                    "relation": "*"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "Pelanggan",
+                    "columns": [
+                        "id_pelanggan"
+                    ],
+                    "relation": "1"
+                },
+                {
+                    "schema": "public",
+                    "table": "Transaksi",
+                    "columns": [
+                        "id_pelanggan"
+                    ],
+                    "relation": "*"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "Transaksi",
+                    "columns": [
+                        "id_transaksi"
+                    ],
+                    "relation": "1"
+                },
+                {
+                    "schema": "public",
+                    "table": "Detail_Transaksi",
+                    "columns": [
+                        "id_transaksi"
+                    ],
+                    "relation": "*"
+                }
+            ]
+        },
+        {
+            "name": null,
+            "schema": "public",
+            "color": null,
+            "onDelete": null,
+            "onUpdate": null,
+            "endpoints": [
+                {
+                    "schema": "public",
+                    "table": "Barang",
+                    "columns": [
+                        "id_barang"
+                    ],
+                    "relation": "1"
+                },
+                {
+                    "schema": "public",
+                    "table": "Detail_Transaksi",
+                    "columns": [
+                        "id_barang"
+                    ],
+                    "relation": "*"
+                }
+            ]
+        }
+    ],
+    "version": 1,
+    "generated_at": "2026-10-13T01:25:45+00:00"
+}
